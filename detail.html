@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon detail</title>
+
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Font Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/detail.css">
+    <link rel="stylesheet" href="./assets/css/progress-bar.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="backButton">
+            <a href="./index.html">
+                <img  class="backImage" src="./assets/image/back.png" alt="" height="30rem">
+            </a>
+        </div>
+        <div id="pokemonName" class="pokemonName">
+
+        </div>
+        <div class="empty">
+        </div>
+        
+    </header>
+
+    <div id="background" class="background_pokemon">
+        
+    </div>
+
+    <section class="content">
+
+            <ol class="stats_name">
+                <li class="teste">About</li>
+                <li class="teste selected">Base Stats</li>
+                <li class="teste">Evolution</li>
+                <li class="teste">Moves</li>
+            </ol>
+        
+        
+
+        <div id="statsList" class="base_stats">
+            
+        </div>
+    </section>
+
+    
+
+    <!-- JavaScript -->
+    <script src="./assets/js/detail/pokemon-stats-model.js"></script>
+    <script src="./assets/js/detail/stats-api.js"></script>
+    <script src="./assets/js/detail/detail.js"></script>
+</body>
+</html>

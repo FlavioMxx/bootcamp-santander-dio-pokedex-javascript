@@ -12,22 +12,25 @@ function loadPokemonItems(offset, limit) {
     .then( (pokemons = []) => { 
         const newList = pokemons.map((pokemon) =>
             `
-            <li class="pokemon ${pokemon.type}">
-                <span class="number">#${pokemon.number < 10 ? "00" + pokemon.number : pokemon.number < 100 ? "0" + pokemon.number : pokemon.number}</span>
-                <span class="name">${pokemon.name}</span>
-                
-                <div class="detail">
-                    <ol class="types">
-                        ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join("")}
-                    </ol>
+            <a href="./detail.html?number=${pokemon.number}&type=${pokemon.type}&name=${pokemon.name}">
+                <li class="pokemon ${pokemon.type}">
+                    <span class="number">#${pokemon.number < 10 ? "00" + pokemon.number : pokemon.number < 100 ? "0" + pokemon.number : pokemon.number}</span>
+                    <span class="name">${pokemon.name}</span>
+                    
+                    <div class="detail">
+                        <ol class="types">
+                            ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join("")}
+                        </ol>
 
-                    <img src="${pokemon.image}" alt=${pokemon.name}>
-                </div>
-            </li>
+                        <img src="${pokemon.image}" alt=${pokemon.name}>
+                    </div>
+                </li>
+            </a>
             `  
         ).join("");
 
     pokemonList.innerHTML += newList;
+    
     });
 }
 
